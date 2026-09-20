@@ -1,0 +1,31 @@
+name: Reconstruct add-on archive
+
+on:
+  push:
+    paths:
+      - '.binary-ready'
+
+permissions:
+  contents: write
+
+jobs:
+  reconstruct:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reconstruct and verify archive
+        shell: bash
+        run: |
+          cat .binary-parts/part-*.b64 | tr -d '\n\r ' | base64 -d > fantasy_chess_generator-0.4.69.zip
+          echo "2054eece61c407f66be0cc660c0bbf96b25fd3acbbc9ae555cf9150fedfabc8e  fantasy_chess_generator-0.4.69.zip" | sha256sum -c -
+          unzip -t fantasy_chess_generator-0.4.69.zip
+      - name: Commit archive and clean staging files
+        shell: bash
+        run: |
+          rm -rf .binary-parts .binary-ready
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Add installable Blender extension archive"
+          git push
