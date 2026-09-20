@@ -127,3 +127,5 @@ For long Colab jobs, PNG sequences are generally more resilient because already-
 ## Project purpose
 
 This repository exists to maintain and distribute the **Chess Set Creator Add-On for Blender 3D**: a customizable procedural chess-set generator capable of producing **15,552 combinations** across its available styles, materials, colors, and board configurations.
+
+![Chess Set Screenshot 3](screenshots/screenshot2.png)
