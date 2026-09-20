@@ -6,7 +6,7 @@ This file gives coding agents repository-specific instructions. Follow it for al
 
 This repository maintains the **Chess Set Creator Add-On for Blender 3D**, currently packaged as the **Fantasy Chess Set Generator** Blender extension.
 
-The extension can generate **15,552 different chess-set combinations** from its supported piece styles, materials, colors, and board appearances. The Google Colab notebook is a companion rendering utility, not the primary product.
+The extension can generate **15,552 different chess-set combinations** from its supported piece styles, materials, colors, and board appearances. The Google Colab notebook is a companion rendering utility for users who do not have a strong local GPU. It offloads Blender/Cycles rendering to Google's Colab GPUs, including free-tier GPU runtime when available. It is not the primary product.
 
 ## Repository layout
 
@@ -14,7 +14,7 @@ The extension can generate **15,552 different chess-set combinations** from its 
   - `__init__.py` — main add-on implementation.
   - `blender_manifest.toml` — Blender extension metadata, minimum Blender version, permissions, license declaration, and packaging rules.
   - `README.md` — extension-specific usage notes.
-- `blender_colab_renderer.ipynb` — optional Google Colab/Cycles GPU rendering workflow for finished `.blend` files.
+- `blender_colab_renderer.ipynb` — Google Colab/Cycles rendering workflow for users without a powerful local GPU; it renders finished `.blend` files on Colab-hosted GPUs.
 - `README.md` — repository-level overview and user instructions.
 - `LICENSE` — repository-level license file.
 
@@ -210,7 +210,7 @@ For export changes, verify the requested format and output path without overwrit
 
 ## Colab notebook rules
 
-`blender_colab_renderer.ipynb` is a companion utility. Do not modify it for ordinary add-on changes.
+`blender_colab_renderer.ipynb` is a companion utility specifically intended for users who lack a strong local GPU. It lets them render with Google Colab's hosted GPUs, including free-tier GPU access when available. Do not modify it for ordinary add-on changes.
 
 When a task specifically changes the notebook:
 
