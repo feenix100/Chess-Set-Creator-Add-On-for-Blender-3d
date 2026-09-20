@@ -1,5 +1,9 @@
 # Chess Set Creator Add-On for Blender 3D
 
+![Chess Set Screenshot](screenshots/screenshot.png)
+
+![Chess Set Screenshot 2](screenshots/screenshot1.png)
+
 A custom Blender 3D chess set creator that can generate **15,552 different chess set combinations** using different piece styles, materials, colors, and board appearances.
 
 The main project is the **Fantasy Chess Set Generator v0.4.69** Blender extension. It creates complete themed chess sets, applies coordinated materials and colors, prepares render/showcase scenes, and supports exporting generated geometry.
