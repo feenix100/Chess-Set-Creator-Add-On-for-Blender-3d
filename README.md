@@ -4,14 +4,14 @@ A custom Blender 3D chess set creator that can generate **15,552 different chess
 
 The main project is the **Fantasy Chess Set Generator v0.4.69** Blender extension. It creates complete themed chess sets, applies coordinated materials and colors, prepares render/showcase scenes, and supports exporting generated geometry.
 
-A companion **Blender Colab Renderer** notebook is included for rendering finished `.blend` scenes with Cycles on a Google Colab NVIDIA GPU.
+A companion **Blender Colab Renderer** notebook is included for users who do not have a powerful local GPU. It offloads Cycles rendering to a Google Colab NVIDIA GPU, using Colab's free GPU runtime when one is available.
 
 ## What this repository contains
 
 | File | Purpose |
 | --- | --- |
 | `fantasy_chess_generator-0.4.69.zip` | Installable Blender extension containing the chess-set creator source and manifest. |
-| `blender_colab_renderer.ipynb` | Optional Google Colab workflow for GPU-rendering saved Blender scenes. |
+| `blender_colab_renderer.ipynb` | Google Colab workflow for users without a strong local GPU; renders saved Blender scenes on a Colab NVIDIA GPU. |
 
 ## Features
 
@@ -25,7 +25,7 @@ A companion **Blender Colab Renderer** notebook is included for rendering finish
 - Individual-piece showcase setup
 - STL, glTF, and GLB export
 - Adjustable board dimensions and piece scale/resolution
-- Optional Google Colab GPU rendering workflow
+- Google Colab GPU rendering workflow for users without a powerful local GPU
 
 ## Requirements
 
@@ -90,7 +90,7 @@ Together with the available styles, side colors/material choices, and board appe
 
 ## Optional: render with Google Colab
 
-The included `blender_colab_renderer.ipynb` notebook is configured for Blender **5.2.0** and Cycles GPU rendering.
+The included `blender_colab_renderer.ipynb` notebook is for users who do not have a powerful GPU in their own computer. It is configured for Blender **5.2.0** and runs Cycles rendering on a Google Colab NVIDIA GPU. Colab offers free GPU runtime access, although GPU availability on the free tier is not guaranteed.
 
 ### Basic use
 
