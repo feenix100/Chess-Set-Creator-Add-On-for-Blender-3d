@@ -1,5 +1,7 @@
 # Fantasy Chess Set Generator
 
+![Fantasy Chess Set Screenshot](../screenshots/screenshot3.png)
+
 Blender Extension version of the Fantasy Chess Set Generator.
 
 ## Features
