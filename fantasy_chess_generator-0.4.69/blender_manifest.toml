@@ -1,0 +1,32 @@
+schema_version = "1.0.0"
+
+id = "fantasy_chess_generator"
+version = "0.4.69"
+name = "Fantasy Chess Set Generator"
+tagline = "Generate fantasy chess sets with materials renders and export"
+maintainer = "Fantasy Chess Generator Project"
+type = "add-on"
+
+blender_version_min = "4.2.0"
+
+license = [
+  "SPDX:GPL-3.0-or-later",
+]
+
+tags = [
+  "3D View",
+  "Add Mesh",
+  "Material",
+  "Render",
+  "Import-Export",
+]
+
+[permissions]
+files = "Export models and rendered media to the user Downloads folder"
+
+[build]
+paths_exclude_pattern = [
+  "__pycache__/",
+  "/.git/",
+  "/*.zip",
+]
